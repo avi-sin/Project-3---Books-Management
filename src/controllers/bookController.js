@@ -95,7 +95,6 @@ const createBook = async function (req, res) {
             data.deletedAt = null
         } else data.deletedAt = new Date()
 
-
         let bookCreated = await bookModel.create(data)
         return res.status(201).send({ status: true, message: 'Success', data: bookCreated })
     } catch (err) {
